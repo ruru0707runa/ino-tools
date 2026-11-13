@@ -1,0 +1,23 @@
+name: publish_authorization_gate
+title: Publish Authorization Gate
+description: Separate a content choice from publish permission so a post goes live only after an explicit publish instruction.
+category: Business
+include_in_prompt: false
+amends:
+  skill: social_publishing
+  reviewed_revision: dd011614fcbffac3b3d5cc8c7bea4ee2d7cf0a7e656c0067b03d27b989beb29f
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - social_publishing:dd011614fcbffac3b3d5cc8c7bea4ee2d7cf0a7e656c0067b03d27b989beb29f
+  - publish_authorization_gate:4d24d35f88eff41d70f9e3e9c9d2191c0823cfc7493d133f70ea7e4fb2a05074
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: No unauthorized publication in the post-install window, and every publish follows a separate explicit publish instruction rather than a content choice alone.
+    window_days: 30
+  needs_review: false
+  rationale: 'The system base social_publishing changed again to revision dd011614fcbffac3b3d5cc8c7bea4ee2d7cf0a7e656c0067b03d27b989beb29f. I re-read the current base at /opt/muse/skills/social-publishing/SKILL.md: its approval section still only requires showing the exact post and treating approval as covering only what the user saw, and it still does not state that choosing between options is not publish permission or that silence is not permission. The publish_authorization_gate amendment therefore remains needed with no wording change; this proposal renews only its reviewed_revision and review metadata. Other window signals were checked and rejected: the yuuki day-1 restart recoveries reported lateness plainly with no duplicates and the base already covers looking up a post or schedule before retrying, the growth-account number correction was a single instance consistent with existing performance guidance, and the 48 terminal failures are bare tool names with no shared instruction gap.'
+  review_after: 2026-12-11T22:43:58.997581+00:00
+  reviewed_at: 2026-11-11T22:43:58.997581+00:00
+  run_id: sirun_6d5673ce5b44400abca85b4c95f0b8e2

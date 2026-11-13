@@ -1,0 +1,24 @@
+name: offer_compensation_reconciliation
+title: Offer Compensation Reconciliation
+description: Reconcile an employer offer against payslips and withholding slips so the annual total, monthly pay, and any gap are shown before negotiation or acceptance.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-3562502f
+  - message:d0f56e20
+  - message:c32ca3e2-3d7c-4afe-a106-9eb52faf295e
+  - message:assistant-msg-2efb465e-d240-4e21-aa76-1efffdc31ebe
+  - message:ec324519-5730-4491-acc5-a703f67588e2
+  - message:assistant-msg-711654f5-1efd-4d3e-8436-7e2b4a86ff8f
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Every salary memo and offer summary in the post-install window recomputes monthly pay times 12 plus only confirmed bonus, shows payer and period coverage, and surfaces gaps without rounding, with no user correction about double counting or an unconfirmed bonus.
+    window_days: 30
+  needs_review: false
+  rationale: 'Salary arithmetic recurred across several employers in this window and was corrected only after user intervention. An earlier summary used an unconfirmed figure that included an unreceived bonus, and an initial multiplication did not match the confirmed monthly figure. In the latest employer exchange the assistant had to flag that adding four months of payslips to a withholding total would double count if that total already covered those months, and the user then confirmed the payer was the current employer with one prior employer missing. The dermatology offer showed the same need in another form: a 450 total against a confirmed 580 current figure, with attendance and staged duty allowances and a first year bonus exclusion changing what the total really meant. No existing skill found by search covers offer reconciliation against payslips and withholding slips. This new skill codifies the corrected method without any personal figure, company name, or document content, and it leaves the existing verified_visual_generation skill untouched because that skill is still inside its measurement window and only one learned skill exists, so no consolidation is triggered.'
+  review_after: 2026-11-28T05:22:04.542864+00:00
+  reviewed_at: 2026-10-29T05:22:04.542864+00:00
+  run_id: sirun_8eb74743d49142a9ba696ce26a105d51

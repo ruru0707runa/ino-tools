@@ -1,0 +1,21 @@
+name: course_knowhow_extraction
+title: Extract Course Know-How
+description: Turn a paid course or large lesson set into a transfer-ready know-how set without verbatim copying or speculative fill, and use it whenever the user asks to ingest course material for reuse by another agent.
+category: Work and knowledge
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - ~/workspace/ig_ren_ai_nerve/shinthreads_input.md
+  - ~/workspace/deeps_leo_pack/
+  - ~/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Every course or lesson-set extraction in the post-install window measures size before a full run, prototypes the format, separates instructor claims from verified facts, and lists unconfirmed items without speculative fill, with no user correction about verbatim copying or an invented gap.
+    window_days: 30
+  needs_review: false
+  rationale: Two large ingestions in the 2026-10-30 to 2026-10-31 window followed the same improvised path. The ShinThreads set was ingested into ~/workspace/ig_ren_ai_nerve/shinthreads_input.md with its claims separated from guarantees and a duplicate-file check, and the Deeps Leo pack was extracted to ~/workspace/deeps_leo_pack/ only after verbatim subtitle extraction was blocked, with a six-item unconfirmed list and a Skill-100 count that first failed a user challenge and then needed correction. No skill found by search covers extracting course know-how without verbatim copying or speculative fill, and the alignment synthesis records the same transfer discipline as a standing habit. This new skill codifies that method generically, without course prices, user facts, or copied course text, so future ingestions start from the measured, prototyped, claims-separated method instead of re-deriving it.
+  review_after: 2026-11-30T22:52:54.191617+00:00
+  reviewed_at: 2026-10-31T22:52:54.191617+00:00
+  run_id: sirun_a60eded4b307446b813402807aaef036

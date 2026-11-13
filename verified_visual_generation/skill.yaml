@@ -1,0 +1,22 @@
+name: verified_visual_generation
+title: Verified Visual Generation
+description: Generate diagrams, posters and short videos that match verified facts and a locked speaker and timing plan when a visual explanation is requested.
+category: Creation
+include_in_prompt: false
+skill_improvement:
+  managed: true
+  status: active
+  evidence_handles:
+  - message:assistant-msg-a522d017
+  - ~/workspace/ig_ren_ai_nerve/saved_neta/draft_01_neck.md
+  - ~/workspace/ig_ren_ai_nerve/saved_neta/neta_cho_2026-11.md
+  - ~/workspace/user/files/AI.md
+  measurement:
+    proxy_metric_id: objective_success_rate
+    success_criterion: Every reel script built from a source procedure brief in the post-install window quotes the source step order in the locked plan and matches it line by line, with no user correction about a reversed, dropped, or reordered procedure step.
+    window_days: 30
+  needs_review: false
+  rationale: 'On 2026-11-12 the saved-folder idea book wrote the neck draft outline as pinch the neck base then exhale for 5 seconds, while the source brief AI.md neck 1 orders it check the spot, release the finger and exhale 5 seconds through the mouth, then pinch the base and inhale 5 seconds through the nose. The production script was corrected only because the source was re-checked while scripting (message:assistant-msg-a522d017, documented in draft_01_neck.md). The same unchecked outline pattern feeds the remaining 11 drafts in neta_cho_2026-11.md, including draft 5 which repeats the reversed pinch-then-exhale order, so the failure mode is live rather than a one-off. The managed verified_visual_generation skill checks facts against the source but never checks step order, and the reel workflow skill instagram_ren is unmanaged by this loop, so the check belongs in the managed video-script skill''s lock section. Other window signals were checked and rejected: the repeated restart lateness on the Threads jobs was handled correctly with re-checks, no duplicates, and plain lateness reporting, and system social_publishing already covers looking up a post before retrying; the shiba noon duplicate draft was caught by the existing duplicate guard with no user correction and has no managed skill home; the deterministic repeated-handoff-suppression candidates concern objective trigger cadence, not a skill; and all four managed skills are inside their measurement windows with no hurt or insufficient signal, with only 4 active learned skills, so no consolidation or retirement is triggered.'
+  review_after: 2026-12-12T23:00:23.860741+00:00
+  reviewed_at: 2026-11-12T23:00:23.860741+00:00
+  run_id: sirun_180cf1a5d95d48218aec2d6fa8cce168
